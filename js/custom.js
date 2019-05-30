@@ -65,7 +65,7 @@ function setGuests() {
       you.textContent = 'тебя'
     } else if (guests.names[0] == 'Кирилл' ||
                guests.names[0] == 'дядя Толя' ||
-               guests.names[0] == 'Дима' || {
+               guests.names[0] == 'Дима' {
       dearEl.textContent  = 'Дорогой'
       you.textContent = 'тебя'
     } else {
@@ -79,7 +79,7 @@ function setGuests() {
 }
 
 function setCounter() {
-  var wdDate = new Date('Sat Jul 27 2019 17:30:00 GMT+0300 (FET)')
+  var wdDate = new Date('Sat Jun 27 2019 17:30:00 GMT+0300 (FET)')
   dayCalc(wdDate)
   setInterval(function() {
     dayCalc(wdDate)
