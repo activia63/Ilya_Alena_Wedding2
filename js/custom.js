@@ -7,10 +7,12 @@ window.onload = function() {
   if (ua.indexOf('safari') != -1 && ua.indexOf('chrome') === -1) { 
     document.getElementsByClassName('second-photos')[0].style.marginTop = '-350px'
   }
+
   var fr = navigator.userAgent.toLowerCase()
   if (fr.indexOf("firefox")) {
     document.getElementsByClassName('second-photos')[0].style.marginTop = '-350px'
   }
+
   if (navigator.appName == 'Microsoft Internet Explorer' || 
       !!(navigator.userAgent.match(/Trident/) ||
       navigator.userAgent.match(/rv:11/))) {
@@ -65,7 +67,7 @@ function setGuests() {
       you.textContent = 'тебя'
     } else if (guests.names[0] == 'Кирилл' ||
                guests.names[0] == 'дядя Толя' ||
-               guests.names[0] == 'Дима' {
+               guests.names[0] == 'Дима') {
       dearEl.textContent  = 'Дорогой'
       you.textContent = 'тебя'
     } else {
@@ -114,8 +116,8 @@ function HTMLUpdate(dateDiff, hourDiff, minDiff) {
   document.getElementById('day-desc').textContent = dayDesc
 
   var hourDesc = ''
-  if (hourDiff % 10 > 4 || hourDiff % 10 === 0) hourDesc = 'Часов'
-  else if (hourDiff % 10 > 1)                   hourDesc = 'Часа'
+  if (hourDiff % 10 > 1 || hourDiff % 10 === 0) hourDesc = 'Часов'
+  else if (hourDiff % 10 > 4)                   hourDesc = 'Часа'
   else                                          hourDesc = 'Час'
   document.getElementById('hour-desc').textContent = hourDesc
 
